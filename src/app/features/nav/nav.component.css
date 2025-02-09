@@ -1,60 +1,78 @@
 
-.custom-navbar {
+  
+  .dropdown > a {
+    cursor: pointer; 
+  }
+  .nav-links li {
+    list-style: none; 
+  }
+  @media (min-width: 769px) {  
+    .dropdown-content {
+      padding: 15px 0; 
+      min-width: 220px;
+    }
+  
+    .dropdown-content li {
+      padding: 12px 20px; 
+    }
+  }
+  
+  .top-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .top-bar a:hover {
+    color: #3402e8;
+  }
+ 
+  .custom-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 5%;
-    position: fixed; 
-    top: 0;
+    position: absolute;
+    top: 40px;
     left: 0;
     width: 100%;
     z-index: 999;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-}
-
-
-
-.logo a {
+  }
+  
+  .logo a {
     font-size: 22px;
     font-weight: bold;
     color: white;
     text-decoration: none;
-}
-
-.logo img {
-    height: 80px;
-    width: 80px;
-    object-fit: contain;
-}
-
-
-.nav-links {
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-.nav-links li {
+  }
+  
+  .nav-links li {
     position: relative;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     transition: 0.3s;
-}
+  }
+  
+  .nav-links a:hover {
+    color: #050f9c;
+  }
+  
 
-.nav-links a:hover {
-    color: #ddd;
-}
-
-
-.dropdown-content {
-    text-decoration: none;
+  .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
@@ -63,98 +81,84 @@
     padding: 10px 0;
     min-width: 180px;
     border-radius: 5px;
-}
-
-.dropdown-content li {
-    text-decoration: none;
-    padding: 8px 15px;
-}
-
-.dropdown-content a {
-    text-decoration: none;
-    color: white;
+  }
+  
+  .dropdown-content.show {
     display: block;
-}
+  }
 
-.dropdown:hover .dropdown-content {
-    text-decoration: none;
-    display: block;
-}
-
-
-.hamburger {
+  .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-}
-
-.bar {
+  }
+  
+  .bar {
     height: 3px;
     width: 25px;
-    background: white; 
+    background: white;
     margin: 4px 0;
-    transition: 0.3s;
-}
-
-
-@media (max-width: 768px) {
+  }
+  
+  .logo img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
     .logo img {
-        height: 60px;
-        width: 60px;
+      height: 60px;
+      width: 60px;
     }
-
+  
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(15px);
-        align-items: center;
-        justify-content: center;
-        z-index: 2000;
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
     }
-
+  
     .nav-links.active {
-        display: flex;
+      display: flex;
     }
-
+  
     .nav-links li {
-        margin: 15px 0;
+      margin: 15px 0;
     }
-
+  
     .nav-links a {
-        font-size: 1.2rem;
-        font-weight: 500;
-        text-align: center;
-        padding: 10px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 10px;
     }
-
+  
     .dropdown-content {
-        position: static;
-        background: transparent;
-        text-align: center;
+      position: static;
+      background: transparent;
+      text-align: center;
+      display: none;
     }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-        position: static;
-        background: rgba(255, 255, 255, 0.1);
-        text-align: center;
+  
+    .dropdown-content.show {
+      display: block;
+      background: rgba(255, 255, 255, 0.1);
     }
-
+  
     .hamburger {
-        display: flex;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        z-index: 2100;
+      display: flex;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 2100;
     }
-
-    .hamburger.active .bar {
-        background: #ffcc00;
-    }
-}
+  }
+  

@@ -1,28 +1,35 @@
+import { CommonModule } from '@angular/common';
 import { Component,HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
-  imports: [RouterLink],
+  imports: [RouterLink,CommonModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
 
-menuOpen = false;
+  menuOpen = false;
+  activeDropdown: string | null = null;
 
-  toggleMenu = () => this.menuOpen = !this.menuOpen;
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
-  dropdownOpen = false;
+  toggleDropdown(dropdown: string, event: Event) {
+    event.stopPropagation(); 
+    if (this.activeDropdown === dropdown) {
+      this.activeDropdown = null;
+    } else {
+      this.activeDropdown = dropdown;
+    }
+  }
 
-toggleDropdown(event: Event) {
-  event.stopPropagation();
-  this.dropdownOpen = !this.dropdownOpen;
-}
-
-@HostListener('document:click')
-closeDropdown() {
-  this.dropdownOpen = false;
-}
-
+  @HostListener('document:click', ['$event'])
+  closeDropdown(event: Event) {
+    if (!(event.target as HTMLElement).closest('.dropdown')) {
+      this.activeDropdown = null;
+    }
+  }
 }
