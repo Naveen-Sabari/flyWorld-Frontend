@@ -1,0 +1,15 @@
+<div class="why-choose-container">
+    <h2>Why Choose Us?</h2>
+    <p>Your trusted partner for a hassle-free migration journey.</p>
+  
+    <div class="cards-container">
+      <div class="card" *ngFor="let item of services">
+        <div class="icon">
+          <img [src]="item.icon" alt="icon" />
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+  

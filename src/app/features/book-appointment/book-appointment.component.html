@@ -1,0 +1,97 @@
+<!-- Appointment Section -->
+<section class="appointment" id="booking">
+    <div class="appointment-card">
+      <div class="appointment-image">
+        <img src="../../../assets/images/Adobe Express - file.png" alt="Appointment">
+      </div>
+      <div class="appointment-content">
+        <h2>Book An Appointment Today</h2>
+        <p>
+          Need help from the best immigration lawyers? Book a free consultation with Flyworld Migration today 
+          Call  <a href="tel:+1234567890" class="highlight "> 📞 +1 234 567 890</a> or submit an online enquiry. 
+          We’ll assign a solicitor to help you apply for the right visa to study or work in Australia.
+        </p>
+  
+        <form class="appointment-form" (ngSubmit)="submitForm()">
+          <div class="form-group">
+            <input type="text" placeholder="Name" [(ngModel)]="formData.name" name="name" required>
+            <input type="email" placeholder="Email" [(ngModel)]="formData.email" name="email" required>
+          </div>
+          <div class="form-group">
+            <input type="phone" inputmode="numeric" pattern="[0-9]*" placeholder="Phone"    minlength="10" maxlength="10"
+
+            [(ngModel)]="formData.phone" name="phone" required>
+            <input type="text" placeholder="Your current residence country" [(ngModel)]="formData.residence" name="residence">
+          </div>
+          <select [(ngModel)]="formData.service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="Student Visa">Student Visa</option>
+            <option value="Work Visa">Work Visa</option>
+            <option value="Tourist Visa">Tourist Visa</option>
+          </select>
+          <textarea placeholder="Message" [(ngModel)]="formData.message" name="message"></textarea>
+        
+      
+        
+          <button type="submit" class="submit-btn">SUBMIT REQUEST</button>
+        </form>
+        
+
+        <h3 *ngIf="successMessage" class="success-message mt-5" style="color: rgb(8, 236, 99);">{{ successMessage }}</h3>
+        
+      </div>
+    
+    </div>
+  </section>
+  
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2><span style="color: rgb(0, 180, 251);">FLY</span>WORLD</h2>
+        <p>AUSTRALIA</p>
+      </div>
+  
+      <div class="footer-links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a href="#">Visa</a></li>
+          <li><a href="#">Skilled Migration</a></li>
+     
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li ><a routerLink="/student">Student Visa</a></li>
+          <li><a routerLink="/visitor">Tourist & Visitor Visa</a></li>
+          <li><a routerLink="/business">Business Visa</a></li>
+       
+          <li><a routerLink="/work">Work Visa</a></li>
+          <li><a routerLink="/permanent">Permanent Resident Visa</a></li>
+          <li><a routerLink="/startup">Startup Visa</a></li>
+          <li><a routerLink="/family">Family Sponsorship</a></li>
+          <li><a routerLink="/study">Study Permit</a></li>
+          <li><a routerLink="/investor">Investor Program</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <ul>
+          <li> sector 1, 111 ,flyworld St, Australia</li>
+          <li>✉️ flyworld&#64;gmail.com</li>
+          <li>📞 +1 2345 67890</li>
+       
+        </ul>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 50px; font-size: 14px; color: white;  background: #002b5b;; padding: 10px;">
+      © 2025 FlyWorld. All Rights Reserved.
+    </p>
+  </footer>
+  

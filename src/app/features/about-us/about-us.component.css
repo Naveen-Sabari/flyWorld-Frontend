@@ -1,0 +1,17 @@
+.visa-page {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    background: #f5f5f5; 
+}
+
+@media (max-width: 768px) {
+    .visa-page {
+        padding-top: 100px; 
+    }
+
+   
+}

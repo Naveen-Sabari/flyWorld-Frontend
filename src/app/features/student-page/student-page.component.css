@@ -1,0 +1,243 @@
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+
+  .about-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .about-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+  }
+  
+  .about-content h1 span {
+    color: #0073e6;
+  }
+  
+  .about-content p {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 10px 0;
+  }
+  
+
+  .study-abroad {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .study-abroad h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+  }
+  
+ 
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 100%;
+  }
+  
+  .country-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .country-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .country-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 5px;
+  }
+  
+  .country-card span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .about-images {
+
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-main {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .image-main img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .image-overlay {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 50%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-overlay img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .reviews-box {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .reviews-box span {
+    display: block;
+    font-size: 0.9rem;
+    color: #0073e6;
+  }
+  
+  .reviews-box strong {
+    font-size: 1.4rem;
+    color: #222;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .fade-in.delay {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-in-out forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideLeft 1s ease-in-out forwards;
+  }
+  
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-content {
+      width: 100%;
+    }
+  
+    .about-images {
+      width: 100%;
+      margin-top: 30px;
+    }
+  
+    .country-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .country-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .image-overlay {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 70%;
+    }
+  
+    .reviews-box {
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  

@@ -1,0 +1,132 @@
+
+.service-coverage-container {
+  background: linear-gradient(to bottom, #ffffff, #e0f7ff);
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.service-coverage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1480px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.coverage-content {
+  width: 55%;
+}
+
+.coverage-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #002855;
+  margin-bottom: 15px;
+}
+
+.coverage-content p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.locations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #002855;
+}
+
+.bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #0056b3;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.coverage-video {
+  width: 42%;
+}
+
+.coverage-video video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .service-coverage {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .coverage-content {
+    width: 100%;
+  }
+
+  .locations {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .coverage-video {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-coverage-container {
+    padding: 40px 0;
+  }
+
+    .service-coverage {
+      padding: 20px;
+    }
+  
+    .coverage-content h2 {
+      font-size: 26px;
+    }
+  
+    .coverage-content p {
+      font-size: 16px;
+    }
+  
+    .locations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      font-size: 16px;
+    }
+  
+    .locations div {
+      width: 45%;
+      text-align: left;
+    }
+  
+    .bullet {
+      width: 10px;
+      height: 10px;
+      margin-right: 8px;
+    }
+  
+    .coverage-video {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .coverage-video video {
+      border-radius: 6px;
+    }
+  }
+  

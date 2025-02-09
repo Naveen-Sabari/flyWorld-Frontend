@@ -1,0 +1,49 @@
+
+  <nav class="custom-navbar">
+    <div class="logo">
+      <a href="#">FlyWorld</a>
+      <img src="assets/images/XDZc.gif" alt="FlyWorld Logo" class="logo-gif">
+    </div>
+  
+
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a routerLink="/">Home</a></li>
+  
+      <li class="dropdown">
+        <a routerLink="/visa">Visas <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li ><a routerLink="/student">Student Visa</a></li>
+          <li><a routerLink="/visitor">Tourist & Visitor Visa</a></li>
+          <li><a routerLink="/business">Business Visa</a></li>
+       
+          <li><a routerLink="/work">Work Visa</a></li>
+          <li><a routerLink="/permanent">Permanent Resident Visa</a></li>
+        </ul>
+      </li>
+      
+  
+  
+      <li class="dropdown">
+        <a routerLink="/skilled-visa">Skilled Migration <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a routerLink="/startup">Startup Visa</a></li>
+          <li><a routerLink="/family">Family Sponsorship</a></li>
+          <li><a routerLink="/study">Study Permit</a></li>
+          <li><a routerLink="/investor">Investor Program</a></li>
+        </ul>
+      </li>
+      
+  
+    
+      <li><a routerLink="/about">About Us</a></li>
+      <li><a routerLink="/contact">Contact Us</a></li>
+    </ul>
+ 
+    <div class="hamburger" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+  
+  

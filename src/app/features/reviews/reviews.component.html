@@ -1,0 +1,26 @@
+<section class="testimonials">
+  <h2>See What Our Clients Are Saying About Us</h2>
+  <p>Read our Google reviews to learn about the experiences of our satisfied clients.</p>
+
+  <div class="carousel-container">
+    <div class="carousel" [ngStyle]="{'transform': 'translateX(' + translateValue + '%)'}">
+      <div *ngFor="let review of reviews" class="review-card">
+        <div class="review-header">
+          <img [src]="review.profileImage" class="profile-img" alt="User Image">
+          <div>
+            <h3 class="mt-4">{{ review.name }}</h3>
+            <p>{{ review.date }}</p>
+          </div>
+          <img src="assets/images/google.png" class="google-icon" alt="Google">
+        </div>
+        
+        <div class="review-rating">
+          <span *ngFor="let star of stars">&#9733;</span>
+          <img src="assets/images/verified.jpg" class="verified-icon" alt="Verified">
+        </div>
+        
+        <p class="review-text">{{ review.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>

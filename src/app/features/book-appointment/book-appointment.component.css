@@ -1,0 +1,254 @@
+
+.appointment {
+    position: relative;
+    margin-bottom: -170px; 
+    z-index: 10;
+    display: flex;
+ 
+    justify-content: center;
+}
+
+.appointment-card {
+    background: linear-gradient(to bottom, #ffffff, #e0f7ff);
+    padding: 50px;
+    border-radius: 12px;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: row;
+    position: relative;
+    box-shadow: 0px 20px 50px rgba(0, 51, 102, 0.8); 
+    border: none; 
+}
+
+
+
+
+
+/* ---- Enlarged Form on Left ---- */
+.appointment-content {
+    flex: 1.5; /* Increased width */
+    min-width: 550px; /* More space for form */
+    padding: 20px;
+}
+
+.appointment-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0c1022;
+}
+
+.appointment-content p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #00ff88;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ---- Large Image on Right ---- */
+.appointment-image {
+    flex: 1.2; /* Allows bigger size */
+    display: flex;
+    justify-content: center; /* Centers image */
+    align-items: center;
+}
+
+.appointment-image img {
+    width: 600px; /* Makes image as big as possible */
+    max-width: 600px; /* Increased size */
+    height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ---- Form Styling ---- */
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.form-group {
+    
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-group input {
+    width: 50%;
+    padding: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.appointment-form select,
+.appointment-form textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.appointment-form textarea {
+    height: 120px;
+}
+
+.recaptcha {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: #003366;
+    color: #0c1022;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ---- Responsive Fixes ---- */
+@media (max-width: 1024px) {
+    .appointment-card {
+        flex-direction: column-reverse; /* Image below form */
+        padding: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .appointment-image {
+        margin-left: 50px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .appointment-image img {
+        max-width: 400px; /* Large even in tablet */
+    }
+
+    .appointment-content {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+}
+/* ---- Footer FIXED ---- */
+.footer {
+   padding-top: 100px;
+    background: #002b5b;
+    color: white;
+    padding: 60px 20px;
+
+    width: 100%;
+    margin-top: 50px; /* Ensure spacing */
+}
+
+.footer-container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.footer-brand .green {
+    color: green;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Ensure Footer is Not Overlapped ---- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ---- Responsive Fixes ---- */
+@media (max-width: 1024px) {
+    .appointment-card {
+        flex-direction: column;
+      
+    }
+
+    .appointment-content {
+        min-width: 100%;
+    }
+
+    .appointment-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

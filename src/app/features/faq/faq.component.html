@@ -1,0 +1,21 @@
+<div class="info-container">
+
+  <div class="faq-container">
+    
+
+    <div class="faq-image">
+      <img src="assets/images/adobe.png" alt="Visa Expert">
+    </div>
+
+    <div class="faq-content">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+
+      <div *ngFor="let faq of faqs; let i = index" class="faq-item" [class.open]="faq.open" (click)="toggleFAQ(i)">
+        <div class="faq-question">{{ faq.question }}</div>
+        <div class="faq-arrow">{{ faq.open ? '▲' : '▼' }}</div>
+        <div class="faq-answer">{{ faq.answer }}</div>
+      </div>
+    </div>
+  </div>
+
+</div>
